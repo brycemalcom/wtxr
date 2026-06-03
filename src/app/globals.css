@@ -1,26 +1,193 @@
 @import "tailwindcss";
 
+/* ------------------------------------------------------------------
+   West Texas Resources, Inc. (WTXR) — Design Tokens
+   Premium, dark, industrial energy-sector identity.
+   Palette: deep red, burnt orange, copper, amber, charcoal, black,
+   warm off-white. All values exposed as CSS variables.
+------------------------------------------------------------------- */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Surfaces */
+  --background: #070707;
+  --surface: #0d0d0f;
+  --surface-elevated: #151517;
+  --surface-warm: #1a100b;
+
+  /* Text */
+  --text-primary: #f6f1e8;
+  --text-secondary: #c8beb2;
+  --text-muted: #8f857a;
+
+  /* Brand */
+  --brand-red: #b3261e;
+  --brand-red-dark: #6f120d;
+  --brand-orange: #f26a1b;
+  --brand-amber: #f2a01b;
+  --brand-copper: #b96b3c;
+
+  /* Borders */
+  --border-subtle: rgba(246, 241, 232, 0.12);
+  --border-warm: rgba(242, 106, 27, 0.25);
+
+  /* Gradients */
+  --gradient-energy: linear-gradient(
+    135deg,
+    #b3261e 0%,
+    #f26a1b 55%,
+    #f2a01b 100%
+  );
+  --gradient-dark: linear-gradient(180deg, #070707 0%, #15100d 100%);
+
+  /* Layout */
+  --max-width: 1280px;
+  --header-height: 4.75rem;
 }
 
 @theme inline {
   --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-surface-warm: var(--surface-warm);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+
+  --color-brand-red: var(--brand-red);
+  --color-brand-red-dark: var(--brand-red-dark);
+  --color-brand-orange: var(--brand-orange);
+  --color-brand-amber: var(--brand-amber);
+  --color-brand-copper: var(--brand-copper);
+
+  --color-border-subtle: var(--border-subtle);
+  --color-border-warm: var(--border-warm);
+
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-sora);
+
+  --breakpoint-xs: 30rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 body {
+  background-color: var(--background);
+  color: var(--text-primary);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Lenis smooth-scroll wiring */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Selection + scrollbar */
+::selection {
+  background: var(--brand-orange);
+  color: #0a0a0a;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--surface-elevated);
+  border-radius: 999px;
+  border: 2px solid var(--background);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-copper);
+}
+
+@layer utilities {
+  .container-px {
+    padding-inline: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    .container-px {
+      padding-inline: 2.5rem;
+    }
+  }
+
+  .shell {
+    width: 100%;
+    max-width: var(--max-width);
+    margin-inline: auto;
+  }
+
+  .kicker {
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--brand-amber);
+  }
+
+  /* Warm energy gradient text */
+  .text-energy {
+    background: var(--gradient-energy);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Soft off-white -> muted gradient for large display headings */
+  .text-gradient {
+    background: linear-gradient(
+      180deg,
+      var(--text-primary) 0%,
+      color-mix(in oklab, var(--text-primary) 55%, var(--text-muted)) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .bg-gradient-energy {
+    background-image: var(--gradient-energy);
+  }
+
+  /* Ambient warm glow used behind hero / CTA */
+  .radial-warm {
+    background: radial-gradient(
+      120% 80% at 50% 0%,
+      color-mix(in oklab, var(--brand-orange) 16%, transparent) 0%,
+      transparent 60%
+    );
+  }
+
+  /* Reservoir / blueprint grid */
+  .reservoir-grid {
+    background-image: linear-gradient(
+        var(--border-subtle) 1px,
+        transparent 1px
+      ),
+      linear-gradient(90deg, var(--border-subtle) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
