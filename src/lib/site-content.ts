@@ -21,10 +21,10 @@ export const company = {
     "West Texas Resources, Inc. is an energy production and development company focused on the acquisition, remediation, reactivation, and redevelopment of mature oil and gas assets.",
   copyrightYear: 2026,
   contact: {
-    investors: "investors@placeholder.com",
-    business: "business@placeholder.com",
-    media: "media@placeholder.com",
-    website: "Placeholder",
+    investors: "dg@TexasCoastalEnegy.com",
+    business: "dg@TexasCoastalEnegy.com",
+    media: "dg@TexasCoastalEnegy.com",
+    website: "www.west-texas.com",
   },
 } as const;
 
@@ -640,8 +640,8 @@ export const investorsPage = {
         value:
           "Acquire mature assets, restore production, optimize recovery, scale portfolio",
       },
-      { label: "Website", value: "Placeholder" },
-      { label: "Investor Contact", value: "Placeholder" },
+      { label: "Website", value: "www.west-texas.com" },
+      { label: "Investor Contact", value: "dg@TexasCoastalEnegy.com" },
     ],
   },
   faq: {
@@ -718,18 +718,18 @@ export const contactPage = {
     {
       title: "Investor Relations",
       description: "For shareholder, investor, or market-related inquiries.",
-      email: "investors@placeholder.com",
+      email: "dg@TexasCoastalEnegy.com",
     },
     {
       title: "Business Development",
       description:
         "For asset opportunities, partnerships, or operational inquiries.",
-      email: "business@placeholder.com",
+      email: "dg@TexasCoastalEnegy.com",
     },
     {
       title: "Media",
       description: "For press, newsroom, or communication requests.",
-      email: "media@placeholder.com",
+      email: "dg@TexasCoastalEnegy.com",
     },
   ],
 } as const;

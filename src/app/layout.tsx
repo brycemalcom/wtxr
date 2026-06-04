@@ -18,7 +18,7 @@ const sora = Sora({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://westtexasresources.com"),
+  metadataBase: new URL("https://www.west-texas.com"),
   title: {
     default: "West Texas Resources, Inc. (WTXR) — Legacy Fields. Modern Recovery.",
     template: "%s · West Texas Resources",
@@ -39,6 +39,7 @@ export const metadata: Metadata = {
     title: "West Texas Resources, Inc. (WTXR)",
     description: "Legacy Fields. Modern Recovery.",
     type: "website",
+    url: "https://www.west-texas.com",
   },
 };
 
