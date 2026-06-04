@@ -13,9 +13,9 @@ export function Hero() {
       id="top"
       className="relative flex min-h-screen items-center overflow-hidden"
     >
-      {/* Looping background video */}
+      {/* Looping background video — brightened to reveal the sunset scene */}
       <video
-        className="absolute inset-0 -z-20 h-full w-full object-cover"
+        className="absolute inset-0 -z-20 h-full w-full object-cover brightness-[1.2] contrast-[1.03] saturate-[1.12]"
         autoPlay
         loop
         muted
@@ -25,11 +25,19 @@ export function Hero() {
         <source src="/wtxr-hero.mp4" type="video/mp4" />
       </video>
 
-      {/* Legibility + brand overlays */}
-      <div className="absolute inset-0 -z-10 bg-[#070707]/35" />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-background via-background/55 to-transparent" />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-background via-transparent to-background/40" />
-      <div className="pointer-events-none absolute -right-[8%] top-[-6%] -z-10 h-[40rem] w-[40rem] rounded-full bg-brand-red/15 blur-[150px]" />
+      {/* Legibility + brand overlays (lighter so the scene reads) */}
+      <div className="absolute inset-0 -z-10 bg-[#070707]/18" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-background/90 via-background/35 to-transparent" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-background via-transparent to-background/35" />
+      {/* Warm sun glow — screen-blended light bleeding through the horizon */}
+      <div
+        className="pointer-events-none absolute inset-0 -z-10 mix-blend-screen"
+        style={{
+          background:
+            "radial-gradient(42% 52% at 66% 44%, rgba(255,178,84,0.4), rgba(255,138,46,0.15) 42%, transparent 72%)",
+        }}
+      />
+      <div className="pointer-events-none absolute -right-[8%] top-[-6%] -z-10 h-[40rem] w-[40rem] rounded-full bg-brand-red/12 blur-[150px]" />
 
       <div className="shell container-px w-full pt-[var(--header-height)]">
         <motion.div
