@@ -11,7 +11,11 @@ import { ContactForm } from "@/components/ui/ContactForm";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Icon } from "@/components/ui/Icon";
 import { NewsCard } from "@/components/ui/NewsCard";
-import { StockQuoteHeader, StockChart } from "@/components/ui/StockWidget";
+import {
+  StockQuoteHeader,
+  StockChart,
+  TickerBand,
+} from "@/components/ui/StockWidget";
 import { investorsPage, company, forwardLookingDisclaimer } from "@/lib/site-content";
 import { investorMaterials } from "@/lib/investor-links";
 import { news } from "@/lib/news";
@@ -40,6 +44,8 @@ export default function InvestorsPage() {
           </Button>
         </div>
       </PageHero>
+
+      <TickerBand />
 
       {/* Stock Information */}
       <Section id="stock" tone="warm">
