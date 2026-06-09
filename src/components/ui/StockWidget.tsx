@@ -60,7 +60,6 @@ export function TickerTape() {
           { proName: "OTC:WTXR", title: "WTXR" },
           { proName: "TVC:USOIL", title: "WTI Crude" },
           { proName: "TVC:UKOIL", title: "Brent Crude" },
-          { proName: "NYMEX:NG1!", title: "Natural Gas" },
         ],
         showSymbolLogo: false,
         colorTheme: "dark",
