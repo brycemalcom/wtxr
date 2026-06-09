@@ -49,6 +49,29 @@ function TradingViewEmbed({
   );
 }
 
+/** Scrolling ticker tape — WTXR plus energy benchmarks for context. */
+export function TickerTape() {
+  return (
+    <TradingViewEmbed
+      className="overflow-hidden rounded-2xl border border-border-warm bg-surface-warm/20"
+      src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
+      config={{
+        symbols: [
+          { proName: "OTC:WTXR", title: "WTXR" },
+          { proName: "TVC:USOIL", title: "WTI Crude" },
+          { proName: "TVC:UKOIL", title: "Brent Crude" },
+          { proName: "NYMEX:NG1!", title: "Natural Gas" },
+        ],
+        showSymbolLogo: false,
+        colorTheme: "dark",
+        isTransparent: true,
+        displayMode: "adaptive",
+        locale: "en",
+      }}
+    />
+  );
+}
+
 /** Quote header — price, change, volume, day/52-week range. */
 export function StockQuoteHeader() {
   return (

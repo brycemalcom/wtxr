@@ -1,17 +1,13 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "motion/react";
 import { Section } from "@/components/ui/Section";
 import { Kicker } from "@/components/ui/Kicker";
 import { Button } from "@/components/ui/Button";
-import { investorSnapshot, company } from "@/lib/site-content";
+import { TickerTape } from "@/components/ui/StockWidget";
+import { investorSnapshot } from "@/lib/site-content";
 import { fadeUp, stagger, fadeUpItem } from "@/lib/motion";
-
-const FACTS = [
-  { label: "Sector", value: "Energy" },
-  { label: "Focus", value: "Legacy field redevelopment" },
-  { label: "Structure", value: "Public company" },
-];
 
 export function InvestorSnapshot() {
   return (
@@ -32,31 +28,24 @@ export function InvestorSnapshot() {
         </p>
       </motion.div>
 
-      {/* Ticker band */}
+      {/* Live ticker feed — WTXR + energy benchmarks */}
       <motion.div
         variants={fadeUp}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-60px" }}
-        className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4 rounded-2xl border border-border-warm bg-surface-warm/20 px-6 py-5 font-mono"
+        className="mt-10"
       >
-        <span className="flex items-center gap-2.5">
-          <span className="h-2 w-2 animate-pulse rounded-full bg-brand-orange" />
-          <span className="text-sm tracking-[0.2em] text-brand-amber">
-            {company.market}: {company.ticker}
-          </span>
-        </span>
-        {FACTS.map((f) => (
-          <span key={f.label} className="flex items-center gap-8">
-            <span className="hidden h-4 w-px bg-border-subtle sm:block" />
-            <span className="flex flex-col leading-tight">
-              <span className="text-[0.6rem] uppercase tracking-wider text-text-muted">
-                {f.label}
-              </span>
-              <span className="mt-0.5 text-sm text-text-primary">{f.value}</span>
-            </span>
-          </span>
-        ))}
+        <TickerTape />
+        <p className="mt-2.5 flex items-center justify-between gap-4 px-1 text-[0.65rem] text-text-muted">
+          <span>Market data by TradingView. Quotes may be delayed.</span>
+          <Link
+            href="/investors#stock"
+            className="shrink-0 font-medium text-brand-orange transition-colors hover:text-brand-amber"
+          >
+            Full quote & chart →
+          </Link>
+        </p>
       </motion.div>
 
       {/* Why WTXR — editorial thesis list */}
