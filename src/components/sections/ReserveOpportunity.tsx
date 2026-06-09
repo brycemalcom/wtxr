@@ -137,12 +137,12 @@ export function ReserveOpportunity() {
           </div>
         </motion.div>
 
-        <div className="mt-20 sm:mt-28">
-          <span className="mb-6 block font-display text-6xl leading-none text-energy">
-            “
-          </span>
-          <KineticQuote text={reserveOpportunity.pullQuote} />
-        </div>
+        <figure className="mt-20 border-l-2 border-brand-orange/70 pl-6 sm:mt-28 sm:pl-10">
+          <KineticQuote text={`“${reserveOpportunity.pullQuote}”`} />
+          <figcaption className="mt-6 font-mono text-xs uppercase tracking-[0.25em] text-text-muted">
+            The WTXR thesis
+          </figcaption>
+        </figure>
       </div>
     </section>
   );

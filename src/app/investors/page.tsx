@@ -11,6 +11,7 @@ import { ContactForm } from "@/components/ui/ContactForm";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Icon } from "@/components/ui/Icon";
 import { NewsCard } from "@/components/ui/NewsCard";
+import { StockQuoteHeader, StockChart } from "@/components/ui/StockWidget";
 import { investorsPage, company, forwardLookingDisclaimer } from "@/lib/site-content";
 import { investorMaterials } from "@/lib/investor-links";
 import { news } from "@/lib/news";
@@ -39,6 +40,34 @@ export default function InvestorsPage() {
           </Button>
         </div>
       </PageHero>
+
+      {/* Stock Information */}
+      <Section id="stock" tone="warm">
+        <SectionHeader
+          kicker="Stock Information"
+          headline="OTC: WTXR"
+          intro="West Texas Resources, Inc. trades on the OTC Markets under the symbol WTXR."
+        />
+        <AnimatedSection className="mt-10">
+          <StockQuoteHeader />
+          <div className="mt-6">
+            <StockChart />
+          </div>
+          <div className="mt-5 flex flex-wrap items-center justify-between gap-4">
+            <p className="text-xs leading-relaxed text-text-muted">
+              Market data provided by TradingView. OTC quotes may be delayed.
+            </p>
+            <a
+              href="https://www.otcmarkets.com/stock/WTXR/overview"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium text-brand-orange transition-colors hover:text-brand-amber"
+            >
+              View WTXR on OTCMarkets.com →
+            </a>
+          </div>
+        </AnimatedSection>
+      </Section>
 
       {/* Investment Thesis */}
       <Section id="thesis">
@@ -76,9 +105,6 @@ export default function InvestorsPage() {
               ))}
             </dl>
           </div>
-          <p className="mt-5 max-w-3xl text-xs leading-relaxed text-text-muted">
-            {investorsPage.snapshot.note}
-          </p>
         </AnimatedSection>
       </Section>
 

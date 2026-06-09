@@ -12,24 +12,26 @@ import { MenuButton } from "@/components/layout/MenuButton";
 
 function Logo({ onClick }: { onClick?: () => void }) {
   return (
-    <Link
-      href="/"
-      onClick={onClick}
-      className="flex flex-col items-center leading-none"
-    >
-      <span className="flex items-center gap-2">
+    <div className="flex flex-col items-center leading-none">
+      <Link href="/" onClick={onClick} className="flex items-center gap-2">
         <span className="flex h-7 w-7 items-center justify-center rounded-md bg-gradient-energy font-display text-xs font-bold text-black">
           W
         </span>
         <span className="font-display text-sm font-bold tracking-tight text-text-primary sm:text-base">
           West Texas Resources
         </span>
-      </span>
-      <span className="mt-1 flex items-center gap-1.5 font-mono text-[0.6rem] tracking-[0.22em] text-brand-amber">
+      </Link>
+      {/* Ticker links to live stock information on the Investors page */}
+      <Link
+        href="/investors#stock"
+        onClick={onClick}
+        className="mt-1 flex items-center gap-1.5 whitespace-nowrap font-mono text-[0.6rem] tracking-[0.22em] text-brand-amber transition-colors hover:text-brand-orange"
+        aria-label="View WTXR stock information"
+      >
         <span className="inline-block h-1.5 w-1.5 rounded-full bg-brand-orange" />
         {company.market}: {company.ticker}
-      </span>
-    </Link>
+      </Link>
+    </div>
   );
 }
 
@@ -69,8 +71,25 @@ export function Navbar() {
         )}
       >
         <div className="shell container-px grid h-[var(--header-height)] grid-cols-3 items-center">
-          {/* Left — spacer to keep the logo centered */}
-          <div aria-hidden />
+          {/* Left — key destinations for a public company (desktop) */}
+          <nav className="hidden items-center gap-7 md:flex">
+            {primaryNav.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={close}
+                className={cn(
+                  "text-[0.8rem] font-medium uppercase tracking-[0.14em] transition-colors",
+                  pathname.startsWith(link.href)
+                    ? "text-brand-amber"
+                    : "text-text-secondary hover:text-text-primary"
+                )}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+          <div aria-hidden className="md:hidden" />
 
           {/* Center — logo + ticker */}
           <div className="justify-self-center">

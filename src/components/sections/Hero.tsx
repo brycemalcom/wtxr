@@ -1,8 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "motion/react";
+import { ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";
-import { Kicker } from "@/components/ui/Kicker";
 import { hero } from "@/lib/site-content";
 import { EASE } from "@/lib/motion";
 import { cn } from "@/lib/utils";
@@ -20,7 +21,8 @@ export function Hero() {
         loop
         muted
         playsInline
-        preload="auto"
+        preload="metadata"
+        poster="/wtxr-hero-poster.jpg"
       >
         <source src="/wtxr-hero.mp4" type="video/mp4" />
       </video>
@@ -45,7 +47,22 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: EASE }}
         >
-          <Kicker>{hero.kicker}</Kicker>
+          {/* Clickable ticker line — never wraps; company name hidden on small screens */}
+          <Link
+            href="/investors#stock"
+            className="group inline-flex items-center gap-3 whitespace-nowrap"
+            aria-label="View WTXR stock information"
+          >
+            <span className="inline-block h-px w-6 bg-gradient-energy" />
+            <span className="kicker">
+              {hero.kickerTicker}
+              <span className="hidden sm:inline">
+                {" "}
+                | {hero.kickerCompany}
+              </span>
+            </span>
+            <ArrowUpRight className="h-3.5 w-3.5 text-brand-amber/70 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-brand-amber" />
+          </Link>
         </motion.div>
 
         <motion.h1

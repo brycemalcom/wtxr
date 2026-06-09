@@ -1,7 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "motion/react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { fadeUpItem } from "@/lib/motion";
 import type { NewsItem } from "@/lib/news";
 
@@ -33,15 +34,13 @@ export function NewsCard({ item }: { item: NewsItem }) {
         <p className="mt-3 flex-1 text-sm leading-relaxed text-text-secondary">
           {item.excerpt}
         </p>
-        <a
-          href={item.sourceUrl}
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          href={`/newsroom/${item.slug}`}
           className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-brand-orange transition-colors hover:text-brand-amber"
         >
-          Read release
-          <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-        </a>
+          Read update
+          <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+        </Link>
       </div>
     </motion.article>
   );

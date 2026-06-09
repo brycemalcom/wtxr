@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { stagger } from "@/lib/motion";
@@ -65,14 +66,12 @@ export function NewsroomList({
             <p className="mt-4 text-sm leading-relaxed text-text-secondary">
               {featured.excerpt}
             </p>
-            <a
-              href={featured.sourceUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href={`/newsroom/${featured.slug}`}
               className="mt-6 inline-flex w-fit items-center gap-1.5 text-sm font-medium text-brand-orange transition-colors hover:text-brand-amber"
             >
-              Read release ↗
-            </a>
+              Read update →
+            </Link>
           </div>
         </motion.article>
       ) : null}
