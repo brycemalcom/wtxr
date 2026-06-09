@@ -50,10 +50,18 @@ function TradingViewEmbed({
 }
 
 /** Scrolling ticker tape — WTXR plus energy benchmarks for context. */
-export function TickerTape() {
+export function TickerTape({
+  variant = "card",
+}: {
+  variant?: "card" | "band";
+}) {
   return (
     <TradingViewEmbed
-      className="overflow-hidden rounded-2xl border border-border-warm bg-surface-warm/20"
+      className={
+        variant === "band"
+          ? "h-[46px] w-full overflow-hidden"
+          : "overflow-hidden rounded-2xl border border-border-warm bg-surface-warm/20"
+      }
       src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
       config={{
         symbols: [
@@ -64,10 +72,22 @@ export function TickerTape() {
         showSymbolLogo: false,
         colorTheme: "dark",
         isTransparent: true,
-        displayMode: "adaptive",
+        displayMode: "regular",
         locale: "en",
       }}
     />
+  );
+}
+
+/**
+ * Full-width ticker band. Sits at the bottom of the hero in normal flow,
+ * then docks beneath the fixed header and stays pinned while scrolling.
+ */
+export function TickerBand() {
+  return (
+    <div className="sticky top-[var(--header-height)] z-30 border-y border-border-subtle bg-background/85 backdrop-blur-xl">
+      <TickerTape variant="band" />
+    </div>
   );
 }
 

@@ -12,7 +12,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-screen items-center overflow-hidden"
+      className="relative flex min-h-[calc(100svh-47px)] items-center overflow-hidden"
     >
       {/* Looping background video — brightened to reveal the sunset scene */}
       <video

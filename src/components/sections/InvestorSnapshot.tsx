@@ -1,11 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "motion/react";
 import { Section } from "@/components/ui/Section";
 import { Kicker } from "@/components/ui/Kicker";
 import { Button } from "@/components/ui/Button";
-import { TickerTape } from "@/components/ui/StockWidget";
 import { investorSnapshot } from "@/lib/site-content";
 import { fadeUp, stagger, fadeUpItem } from "@/lib/motion";
 
@@ -25,26 +23,6 @@ export function InvestorSnapshot() {
         </h2>
         <p className="mt-6 text-base leading-relaxed text-text-secondary sm:text-lg">
           {investorSnapshot.paragraphs[0]}
-        </p>
-      </motion.div>
-
-      {/* Live ticker feed — WTXR + energy benchmarks */}
-      <motion.div
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-60px" }}
-        className="mt-10"
-      >
-        <TickerTape />
-        <p className="mt-2.5 flex items-center justify-between gap-4 px-1 text-[0.65rem] text-text-muted">
-          <span>Market data by TradingView. Quotes may be delayed.</span>
-          <Link
-            href="/investors#stock"
-            className="shrink-0 font-medium text-brand-orange transition-colors hover:text-brand-amber"
-          >
-            Full quote & chart →
-          </Link>
         </p>
       </motion.div>
 

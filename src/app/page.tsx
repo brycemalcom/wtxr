@@ -1,4 +1,5 @@
 import { Hero } from "@/components/sections/Hero";
+import { TickerBand } from "@/components/ui/StockWidget";
 import { CompanySnapshot } from "@/components/sections/CompanySnapshot";
 import { OperatingModel } from "@/components/sections/OperatingModel";
 import { ReserveOpportunity } from "@/components/sections/ReserveOpportunity";
@@ -14,6 +15,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <TickerBand />
       <CompanySnapshot />
       <OperatingModel />
       <ReserveOpportunity />

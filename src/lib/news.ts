@@ -32,24 +32,6 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
-    slug: "chairman-letter-spring-2026",
-    title: "Chairman's Spring 2026 Letter to Shareholders",
-    category: "Investor Relations",
-    displayCategory: "Investor Relations",
-    date: "May 28, 2026",
-    source: "EIN Presswire",
-    sourceUrl:
-      "https://www.einpresswire.com/article/915565050/west-texas-resources-inc-wxtr-announces-chairman-s-spring-2026-letter-to-shareholders",
-    excerpt:
-      "West Texas Resources outlines a period of disciplined advancement across regulatory compliance, operational capability, and strategic growth — including completed OTC Markets updates for year-end 2025 and Q1 2026, reinstatement to OTC.ID and OTC.BB, and engagement of an auditor in support of an OTCQB uplisting.",
-    body: [
-      "West Texas Resources, Inc. published its Chairman's Spring 2026 letter to shareholders, describing a period of disciplined advancement across three fronts: regulatory compliance, operational capability, and strategic growth.",
-      "On the compliance front, the company completed its OTC Markets disclosure updates for year-end 2025 and the first quarter of 2026, and was reinstated to OTC.ID and OTC.BB status. The company also engaged an auditor in support of a planned uplisting to the OTCQB market tier.",
-      "The letter frames these steps as the foundation for the company's broader strategy — returning legacy Texas oil and gas assets to production under transparent, public-company standards.",
-    ],
-    featured: true,
-  },
-  {
     slug: "reactivation-plan-59-wells",
     title:
       "West Texas Resources Outlines Reactivation Plan for 59 Wells Following Successful Well Test",
