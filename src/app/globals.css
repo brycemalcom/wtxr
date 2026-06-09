@@ -40,7 +40,7 @@
 
   /* Layout */
   --max-width: 1280px;
-  --header-height: 4.75rem;
+  --header-height: 5.75rem;
 }
 
 @theme inline {

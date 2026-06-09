@@ -11,39 +11,29 @@ import { primaryNav, sectionNav, company } from "@/lib/site-content";
 import { EASE } from "@/lib/motion";
 import { MenuButton } from "@/components/layout/MenuButton";
 
-function Logo({ onClick }: { onClick?: () => void }) {
+function Logo({
+  onClick,
+  compact,
+}: {
+  onClick?: () => void;
+  compact?: boolean;
+}) {
   return (
-    <div className="flex items-center gap-3">
-      <Link href="/" onClick={onClick} className="shrink-0">
-        <Image
-          src="/wtxr-logo.png"
-          alt="West Texas Resources, Inc."
-          width={44}
-          height={44}
-          priority
-          className="h-10 w-10 sm:h-11 sm:w-11"
-        />
-      </Link>
-      <div className="flex flex-col leading-none">
-        <Link
-          href="/"
-          onClick={onClick}
-          className="whitespace-nowrap font-display text-sm font-bold tracking-tight text-text-primary sm:text-base"
-        >
-          West Texas Resources
-        </Link>
-        {/* Ticker links to live stock information on the Investors page */}
-        <Link
-          href="/investors#stock"
-          onClick={onClick}
-          className="mt-1.5 flex items-center gap-1.5 whitespace-nowrap font-mono text-[0.6rem] tracking-[0.22em] text-brand-amber transition-colors hover:text-brand-orange"
-          aria-label="View WTXR stock information"
-        >
-          <span className="inline-block h-1.5 w-1.5 rounded-full bg-brand-orange" />
-          {company.market}: {company.ticker}
-        </Link>
-      </div>
-    </div>
+    <Link href="/" onClick={onClick} className="inline-flex shrink-0">
+      <Image
+        src="/wtxr-logo.png"
+        alt="West Texas Resources, Inc."
+        width={96}
+        height={96}
+        priority
+        className={cn(
+          "transition-all duration-500",
+          compact
+            ? "h-14 w-14 sm:h-[4.5rem] sm:w-[4.5rem]"
+            : "h-[4.5rem] w-[4.5rem] sm:h-24 sm:w-24"
+        )}
+      />
+    </Link>
   );
 }
 
@@ -83,9 +73,9 @@ export function Navbar() {
         )}
       >
         <div className="shell container-px grid h-[var(--header-height)] grid-cols-[1fr_auto] items-center md:grid-cols-3">
-          {/* Left — logo + ticker */}
+          {/* Left — badge logo, large over the hero, compact once scrolled */}
           <div className="justify-self-start">
-            <Logo onClick={close} />
+            <Logo onClick={close} compact={scrolled && !open} />
           </div>
 
           {/* Center — key destinations for a public company (desktop) */}
