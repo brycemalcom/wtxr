@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { company, forwardLookingShort } from "@/lib/site-content";
 import { footerLinks } from "@/lib/investor-links";
@@ -19,10 +20,14 @@ export function Footer() {
       <div className="shell container-px py-16">
         <div className="grid gap-12 lg:grid-cols-[1.5fr_2fr]">
           <div>
-            <div className="flex items-center gap-2.5">
-              <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-energy font-display text-sm font-bold text-black">
-                W
-              </span>
+            <div className="flex items-center gap-3">
+              <Image
+                src="/wtxr-logo.png"
+                alt="West Texas Resources, Inc."
+                width={48}
+                height={48}
+                className="h-12 w-12"
+              />
               <span className="font-display text-base font-bold tracking-tight">
                 {company.name}
               </span>

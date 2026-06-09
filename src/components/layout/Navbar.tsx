@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "motion/react";
@@ -12,25 +13,36 @@ import { MenuButton } from "@/components/layout/MenuButton";
 
 function Logo({ onClick }: { onClick?: () => void }) {
   return (
-    <div className="flex flex-col items-center leading-none">
-      <Link href="/" onClick={onClick} className="flex items-center gap-2">
-        <span className="flex h-7 w-7 items-center justify-center rounded-md bg-gradient-energy font-display text-xs font-bold text-black">
-          W
-        </span>
-        <span className="font-display text-sm font-bold tracking-tight text-text-primary sm:text-base">
+    <div className="flex items-center gap-3">
+      <Link href="/" onClick={onClick} className="shrink-0">
+        <Image
+          src="/wtxr-logo.png"
+          alt="West Texas Resources, Inc."
+          width={44}
+          height={44}
+          priority
+          className="h-10 w-10 sm:h-11 sm:w-11"
+        />
+      </Link>
+      <div className="flex flex-col leading-none">
+        <Link
+          href="/"
+          onClick={onClick}
+          className="whitespace-nowrap font-display text-sm font-bold tracking-tight text-text-primary sm:text-base"
+        >
           West Texas Resources
-        </span>
-      </Link>
-      {/* Ticker links to live stock information on the Investors page */}
-      <Link
-        href="/investors#stock"
-        onClick={onClick}
-        className="mt-1 flex items-center gap-1.5 whitespace-nowrap font-mono text-[0.6rem] tracking-[0.22em] text-brand-amber transition-colors hover:text-brand-orange"
-        aria-label="View WTXR stock information"
-      >
-        <span className="inline-block h-1.5 w-1.5 rounded-full bg-brand-orange" />
-        {company.market}: {company.ticker}
-      </Link>
+        </Link>
+        {/* Ticker links to live stock information on the Investors page */}
+        <Link
+          href="/investors#stock"
+          onClick={onClick}
+          className="mt-1.5 flex items-center gap-1.5 whitespace-nowrap font-mono text-[0.6rem] tracking-[0.22em] text-brand-amber transition-colors hover:text-brand-orange"
+          aria-label="View WTXR stock information"
+        >
+          <span className="inline-block h-1.5 w-1.5 rounded-full bg-brand-orange" />
+          {company.market}: {company.ticker}
+        </Link>
+      </div>
     </div>
   );
 }
@@ -70,9 +82,14 @@ export function Navbar() {
             : "border-b border-transparent bg-transparent"
         )}
       >
-        <div className="shell container-px grid h-[var(--header-height)] grid-cols-3 items-center">
-          {/* Left — key destinations for a public company (desktop) */}
-          <nav className="hidden items-center gap-7 md:flex">
+        <div className="shell container-px grid h-[var(--header-height)] grid-cols-[1fr_auto] items-center md:grid-cols-3">
+          {/* Left — logo + ticker */}
+          <div className="justify-self-start">
+            <Logo onClick={close} />
+          </div>
+
+          {/* Center — key destinations for a public company (desktop) */}
+          <nav className="hidden items-center gap-7 justify-self-center md:flex">
             {primaryNav.map((link) => (
               <Link
                 key={link.href}
@@ -89,12 +106,6 @@ export function Navbar() {
               </Link>
             ))}
           </nav>
-          <div aria-hidden className="md:hidden" />
-
-          {/* Center — logo + ticker */}
-          <div className="justify-self-center">
-            <Logo onClick={close} />
-          </div>
 
           {/* Right — menu */}
           <div className="justify-self-end">
