@@ -130,6 +130,15 @@ export default function InvestorsPage() {
                 <span className="mt-5 inline-block text-sm font-medium text-text-muted">
                   {mat.cta}
                 </span>
+              ) : mat.href.startsWith("http") ? (
+                <a
+                  href={mat.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-5 inline-block text-sm font-medium text-brand-orange transition-colors hover:text-brand-amber"
+                >
+                  {mat.cta} →
+                </a>
               ) : (
                 <Link
                   href={mat.href}

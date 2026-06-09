@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "motion/react";
 import { ArrowRight } from "lucide-react";
 import { Section } from "@/components/ui/Section";
 import { Kicker } from "@/components/ui/Kicker";
-import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/ui/Icon";
 import { FieldCrossSection } from "@/components/ui/FieldCrossSection";
 import { FieldReadout } from "@/components/ui/FieldReadout";
@@ -156,11 +155,6 @@ export function TechnologyGrid() {
         </div>
       </motion.div>
 
-      <div className="mt-12">
-        <Button href={technologyPreview.cta.href} variant="secondary">
-          {technologyPreview.cta.label}
-        </Button>
-      </div>
     </Section>
   );
 }

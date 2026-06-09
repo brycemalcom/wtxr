@@ -58,7 +58,7 @@ export const hero = {
   kickerCompany: "West Texas Resources Inc",
   headline: "Legacy Fields. Modern Recovery.",
   subheadline:
-    "A public energy company returning mature Texas oil and gas fields to production — with modern recovery technology and four decades of field experience.",
+    "A public energy company focused on returning mature Texas oil and gas fields to production — with modern recovery technology and four decades of field experience.",
   body: "WTXR targets legacy oil and gas assets with proven production history, existing infrastructure, and meaningful redevelopment potential — converting overlooked fields into productive long-term energy assets.",
   primaryCta: { label: "Explore the Strategy", href: "#model" },
   secondaryCta: { label: "Investor Relations", href: "/investors" },
@@ -126,7 +126,6 @@ export const technologyPreview = {
   headline: "Applying Today’s Technology to Yesterday’s Discoveries",
   intro:
     "Experienced field operations, paired with modern petroleum technologies — restoring production, improving flow, and extending the life of mature assets.",
-  cta: { label: "View Recovery Methods", href: "/technology" },
   cards: [
     {
       icon: "stimulation",
@@ -214,7 +213,6 @@ export const operationsPreview = {
     "Reactivate",
     "Optimize",
   ],
-  cta: { label: "Explore Operations", href: "/operations" },
 } as const;
 
 export const assetFocus = {

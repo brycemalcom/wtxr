@@ -4,7 +4,6 @@ import { motion, type Variants } from "motion/react";
 import { ArrowRight } from "lucide-react";
 import { Section } from "@/components/ui/Section";
 import { Kicker } from "@/components/ui/Kicker";
-import { Button } from "@/components/ui/Button";
 import { FieldStateSchematic } from "@/components/ui/FieldStateSchematic";
 import { cn } from "@/lib/utils";
 import { operationsPreview } from "@/lib/site-content";
@@ -135,11 +134,6 @@ export function OperationsTimeline() {
         </motion.div>
       </div>
 
-      <div className="mt-12">
-        <Button href={operationsPreview.cta.href} variant="secondary">
-          {operationsPreview.cta.label}
-        </Button>
-      </div>
     </Section>
   );
 }

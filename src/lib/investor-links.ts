@@ -17,8 +17,9 @@ export const investorMaterials: InvestorMaterial[] = [
     icon: "file",
     title: "Company Overview",
     description: "Download or view the latest WTXR company overview.",
-    cta: "View Overview",
+    cta: "Coming Soon",
     href: "#",
+    disabled: true,
   },
   {
     icon: "presentation",
@@ -38,28 +39,30 @@ export const investorMaterials: InvestorMaterial[] = [
   {
     icon: "disclosure",
     title: "Public Disclosures",
-    description: "Access public filings and disclosure resources.",
-    cta: "View Disclosures",
-    href: "#",
+    description:
+      "Access WTXR's public filings and disclosure documents on OTC Markets.",
+    cta: "View on OTC Markets",
+    href: "https://www.otcmarkets.com/stock/WTXR/disclosure",
   },
 ];
 
 export const footerLinks = {
   company: [
-    { label: "About", href: "/about" },
-    { label: "Operations", href: "/operations" },
-    { label: "Technology", href: "/technology" },
+    { label: "Company Overview", href: "/#company" },
+    { label: "Operations", href: "/#operations" },
+    { label: "Technology", href: "/#technology" },
     { label: "Contact", href: "/contact" },
   ],
   investors: [
     { label: "Investor Relations", href: "/investors" },
+    { label: "Stock Information", href: "/investors#stock" },
     { label: "Newsroom", href: "/newsroom" },
-    { label: "Public Disclosures", href: "/investors" },
-    { label: "Investor Contact", href: "/investors#investor-contact" },
+    {
+      label: "Public Disclosures",
+      href: "https://www.otcmarkets.com/stock/WTXR/disclosure",
+    },
   ],
   legal: [
     { label: "Forward-Looking Statements", href: "/investors#disclaimer" },
-    { label: "Privacy Policy", href: "#" },
-    { label: "Terms of Use", href: "#" },
   ],
 } as const;

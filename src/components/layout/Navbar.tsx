@@ -118,53 +118,27 @@ export function Navbar() {
 
             <div className="shell container-px flex min-h-screen flex-col justify-center pb-16 pt-[var(--header-height)]">
               <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr]">
-                {/* Story sections */}
-                <div>
-                  <p className="kicker mb-8">Explore</p>
-                  <ul className="space-y-1">
-                    {sectionNav.map((link, i) => (
-                      <motion.li
-                        key={link.href}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.06 * i + 0.1, ease: EASE }}
-                      >
-                        <Link
-                          href={link.href}
-                          onClick={close}
-                          className="group flex items-baseline gap-4 py-2"
-                        >
-                          <span className="font-mono text-xs text-text-muted transition-colors group-hover:text-brand-amber">
-                            {link.index}
-                          </span>
-                          <span className="font-display text-3xl font-semibold tracking-tight text-text-secondary transition-colors group-hover:text-text-primary sm:text-4xl">
-                            {link.label}
-                          </span>
-                        </Link>
-                      </motion.li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Pages + meta */}
-                <div className="flex flex-col justify-between gap-10 border-t border-border-subtle pt-10 lg:border-l lg:border-t-0 lg:pl-12 lg:pt-0">
+                {/* Key destinations — first on mobile, right column on desktop */}
+                <div className="flex flex-col justify-between gap-10 lg:order-last lg:border-l lg:border-border-subtle lg:pl-12">
                   <div>
-                    <p className="kicker mb-6">Investor & Company</p>
-                    <ul className="space-y-3">
+                    <p className="kicker mb-6">Investors & Company</p>
+                    <ul className="space-y-1">
                       {primaryNav.map((link, i) => (
                         <motion.li
                           key={link.href}
-                          initial={{ opacity: 0, y: 16 }}
+                          initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: 0.06 * i + 0.3, ease: EASE }}
+                          transition={{ delay: 0.06 * i + 0.1, ease: EASE }}
                         >
                           <Link
                             href={link.href}
                             onClick={close}
-                            className="group inline-flex items-center gap-1.5 text-lg text-text-secondary transition-colors hover:text-text-primary"
+                            className="group inline-flex items-center gap-3 py-2"
                           >
-                            {link.label}
-                            <ArrowUpRight className="h-4 w-4 text-text-muted transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-brand-orange" />
+                            <span className="font-display text-3xl font-semibold tracking-tight text-text-primary transition-colors group-hover:text-brand-amber sm:text-4xl">
+                              {link.label}
+                            </span>
+                            <ArrowUpRight className="h-6 w-6 text-text-muted transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-brand-orange" />
                           </Link>
                         </motion.li>
                       ))}
@@ -175,15 +149,8 @@ export function Navbar() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.5 }}
-                    className="space-y-4 text-sm text-text-muted"
+                    className="hidden space-y-4 text-sm text-text-muted lg:block"
                   >
-                    <Link
-                      href="/investors"
-                      onClick={close}
-                      className="inline-flex rounded-full bg-gradient-energy px-6 py-3 font-semibold text-black transition-transform hover:scale-[1.03]"
-                    >
-                      Investor Relations
-                    </Link>
                     <p className="font-mono tracking-widest text-brand-amber">
                       {company.market}: {company.ticker}
                     </p>
@@ -194,6 +161,34 @@ export function Navbar() {
                       {company.contact.investors}
                     </a>
                   </motion.div>
+                </div>
+
+                {/* Story sections */}
+                <div className="border-t border-border-subtle pt-10 lg:border-t-0 lg:pt-0">
+                  <p className="kicker mb-8">Explore the Story</p>
+                  <ul className="space-y-1">
+                    {sectionNav.map((link, i) => (
+                      <motion.li
+                        key={link.href}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.06 * i + 0.25, ease: EASE }}
+                      >
+                        <Link
+                          href={link.href}
+                          onClick={close}
+                          className="group flex items-baseline gap-4 py-1.5"
+                        >
+                          <span className="font-mono text-xs text-text-muted transition-colors group-hover:text-brand-amber">
+                            {link.index}
+                          </span>
+                          <span className="font-display text-2xl font-semibold tracking-tight text-text-secondary transition-colors group-hover:text-text-primary sm:text-3xl">
+                            {link.label}
+                          </span>
+                        </Link>
+                      </motion.li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </div>

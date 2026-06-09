@@ -47,12 +47,23 @@ export function Footer() {
                 <ul className="mt-4 space-y-3">
                   {col.links.map((link) => (
                     <li key={link.label}>
-                      <Link
-                        href={link.href}
-                        className="text-sm text-text-secondary transition-colors hover:text-brand-orange"
-                      >
-                        {link.label}
-                      </Link>
+                      {link.href.startsWith("http") ? (
+                        <a
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-text-secondary transition-colors hover:text-brand-orange"
+                        >
+                          {link.label}
+                        </a>
+                      ) : (
+                        <Link
+                          href={link.href}
+                          className="text-sm text-text-secondary transition-colors hover:text-brand-orange"
+                        >
+                          {link.label}
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>
