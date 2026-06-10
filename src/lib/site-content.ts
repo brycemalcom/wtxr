@@ -59,7 +59,6 @@ export const hero = {
   headline: "Legacy Fields. Modern Recovery.",
   subheadline:
     "A public energy company focused on returning mature Texas oil and gas fields to production — with modern recovery technology and four decades of field experience.",
-  body: "WTXR targets legacy oil and gas assets with proven production history, existing infrastructure, and meaningful redevelopment potential — converting overlooked fields into productive long-term energy assets.",
   primaryCta: { label: "Explore the Strategy", href: "#model" },
   secondaryCta: { label: "Investor Relations", href: "/investors" },
   stats: [
@@ -85,7 +84,7 @@ export const operatingModel = {
   kicker: "Operating Model",
   headline: "A Disciplined Approach to Legacy Field Redevelopment",
   intro:
-    "WTXR targets fields where hydrocarbons have already been discovered. Production history, existing infrastructure, and modern recovery methods create a lower-risk path back to production than traditional exploration.",
+    "Every asset moves through the same four-step framework — a repeatable discipline for returning known fields to production.",
   cards: [
     {
       title: "Acquire",
@@ -115,7 +114,7 @@ export const reserveOpportunity = {
   headline: "Recovering Hydrocarbons Earlier Operators Left Behind",
   paragraphs: [
     "Many mature oil and gas fields were developed using the best technology available at the time, but those methods often recovered only a portion of the hydrocarbons originally in place.",
-    "WTXR applies modern reservoir analysis, recovery technology, and field optimization to proven assets where prior operators may have left significant recoverable resources behind.",
+    "WTXR uses modern reservoir analysis to locate where that remaining resource is concentrated — and applies the recovery methods best suited to reach it.",
   ],
   pullQuote:
     "Legacy fields are not failed fields. In many cases, they are proven assets waiting for modern redevelopment.",
@@ -170,7 +169,7 @@ export const operationsPreview = {
   kicker: "Operations",
   headline: "Turning Dormant Fields Into Productive Assets",
   intro:
-    "WTXR focuses on mature fields where existing infrastructure and historical production records support a disciplined path back to production.",
+    "This is where the strategy meets the field — assessment, compliance work, workovers, and optimization that move wells from shut-in back into service.",
   lens: "Every asset evaluated through a practical operating lens",
   criteria: [
     "Well condition",
@@ -219,7 +218,7 @@ export const assetFocus = {
   kicker: "Asset Focus",
   headline: "A Portfolio Strategy Built Around Existing Oil-Field Value",
   intro:
-    "WTXR targets assets where prior investment already created wellbores, infrastructure, access, and production history — a more efficient foundation than starting from scratch.",
+    "The portfolio spans six asset types, each selected for value already in place — wellbores, surface infrastructure, lease access, and production records.",
   cards: [
     {
       icon: "well",
@@ -262,9 +261,9 @@ export const assetFocus = {
 
 export const investorSnapshot = {
   kicker: "Investor Relations",
-  headline: "A Public Energy Platform Focused on Legacy Asset Recovery",
+  headline: "Built for Public Markets. Focused on the Field.",
   paragraphs: [
-    "Exposure to a focused energy redevelopment strategy: mature oil and gas assets, proven production history, and modern recovery potential — managed for long-term value.",
+    "Exposure to a focused redevelopment strategy — proven Texas fields, disciplined operations, and progress reported in the open as a public company.",
   ],
   primaryCta: { label: "Visit Investor Relations", href: "/investors" },
   secondaryCta: { label: "View Newsroom", href: "/newsroom" },
@@ -321,229 +320,15 @@ export const newsroomPreview = {
   kicker: "Newsroom",
   headline: "Company Updates, Press Releases & Investor News",
   intro:
-    "Operational milestones, investor communications, and corporate announcements from West Texas Resources.",
+    "Official releases, summarized on site and linked to the source of record.",
   cta: { label: "Visit Newsroom", href: "/newsroom" },
 } as const;
 
 export const finalCta = {
   headline: "Modern Recovery for Proven Energy Assets",
-  body: "West Texas Resources is building a focused public energy company around legacy field remediation, modern recovery technology, and disciplined redevelopment of mature oil and gas assets.",
+  body: "The approach is set: proven fields, disciplined reactivation, transparent reporting. Connect with the team to discuss assets, partnerships, or investor questions — or follow our progress in the newsroom.",
   primaryCta: { label: "Contact WTXR", href: "/contact" },
   secondaryCta: { label: "Investor Relations", href: "/investors" },
-} as const;
-
-/* ------------------------------- About ------------------------------- */
-
-export const aboutPage = {
-  hero: {
-    kicker: "About West Texas Resources",
-    headline:
-      "Experienced Energy Operators Focused on Legacy Field Redevelopment",
-    copy: "West Texas Resources, Inc. is a specialized energy company focused on acquiring, remediating, reactivating, and redeveloping mature oil and gas fields. The company’s strategy is built around proven production history, existing infrastructure, technical experience, and modern recovery methods.",
-  },
-  whoWeAre: {
-    headline: "A Company Built for Modern Recovery",
-    paragraphs: [
-      "WTXR was created to pursue value in legacy oil and gas assets that may be overlooked by larger operators or undercapitalized by previous owners. These assets often have known production history, existing wells, field infrastructure, and remaining redevelopment potential.",
-      "The company applies a disciplined technical and operational process to determine where modern recovery methods can restore production and improve long-term field performance.",
-    ],
-  },
-  different: {
-    kicker: "What Makes WTXR Different",
-    headline: "Built Around Proven Fields and Practical Execution",
-    cards: [
-      {
-        icon: "proven",
-        title: "Proven Fields, Not Guesswork",
-        description:
-          "WTXR focuses on fields with production history and existing data rather than relying solely on speculative exploration.",
-      },
-      {
-        icon: "infrastructure",
-        title: "Existing Infrastructure",
-        description:
-          "Many target assets include wellbores, tanks, roads, lines, and surface systems that may reduce redevelopment cost and timeline.",
-      },
-      {
-        icon: "team",
-        title: "Experienced Technical Team",
-        description:
-          "WTXR’s management, geologists, petroleum engineers, and field operators bring decades of practical industry experience.",
-      },
-      {
-        icon: "stimulation",
-        title: "Modern Recovery Methods",
-        description:
-          "The company applies updated recovery tools and operational practices that were unavailable to many original operators.",
-      },
-    ],
-  },
-  mission: {
-    kicker: "Our Mission",
-    headline: "Reclaim. Restore. Recover.",
-    copy: "Our mission is to reclaim legacy oil and gas fields, restore productive capacity, and responsibly recover energy resources from proven assets.",
-  },
-  values: {
-    kicker: "Our Values",
-    headline: "Principles That Guide Every Asset Decision",
-    cards: [
-      {
-        title: "Operational Discipline",
-        description:
-          "Every asset must be evaluated through technical, regulatory, infrastructure, and economic filters.",
-      },
-      {
-        title: "Responsible Redevelopment",
-        description:
-          "WTXR seeks to improve legacy fields through remediation, compliance, maintenance, and modern operating standards.",
-      },
-      {
-        title: "Shareholder Alignment",
-        description:
-          "As a public company, WTXR is focused on transparent communication and long-term value creation.",
-      },
-      {
-        title: "Technical Excellence",
-        description:
-          "The company relies on geology, engineering, field experience, and production analysis to guide decisions.",
-      },
-    ],
-  },
-} as const;
-
-/* ----------------------------- Operations ----------------------------- */
-
-export const operationsPage = {
-  hero: {
-    kicker: "Operations",
-    headline: "Legacy Field Reactivation Through Disciplined Execution",
-    copy: "WTXR’s operations focus on restoring value from mature oil and gas fields through practical field assessment, compliance work, workovers, stimulation, artificial lift, recompletion, and ongoing optimization.",
-  },
-  strategy: {
-    kicker: "Operating Strategy",
-    headline: "From Dormant Infrastructure to Productive Assets",
-    copy: "Many mature oil and gas assets already contain the foundation for renewed production: wells, roads, tanks, lines, lease access, surface equipment, and historical production records. WTXR evaluates these assets to determine where targeted remediation and modern recovery methods can create renewed production potential.",
-  },
-  workflow: {
-    kicker: "Operating Workflow",
-    headline: "A Repeatable, Disciplined Field Process",
-    steps: [
-      {
-        title: "Field Screening",
-        description:
-          "Identify mature fields, low-producing wells, shut-in wells, and underutilized assets with known production history.",
-      },
-      {
-        title: "Technical Review",
-        description:
-          "Analyze reservoir data, historical production, well files, lease status, equipment, field access, and redevelopment requirements.",
-      },
-      {
-        title: "Acquisition",
-        description:
-          "Acquire or secure interests in assets that meet WTXR’s technical, operational, and economic criteria.",
-      },
-      {
-        title: "Remediation & Compliance",
-        description:
-          "Address regulatory, mechanical, surface, and operational requirements needed to return wells to service.",
-      },
-      {
-        title: "Reactivation",
-        description:
-          "Use workovers, lift systems, stimulation, recompletion, or facility upgrades to restore production.",
-      },
-      {
-        title: "Optimization",
-        description:
-          "Monitor production, reduce downtime, improve field performance, and evaluate additional recovery opportunities.",
-      },
-    ],
-  },
-  priorities: {
-    kicker: "Operating Priorities",
-    headline: "Where WTXR Focuses Field Capital",
-    cards: [
-      {
-        icon: "shield",
-        title: "Compliance First",
-        description:
-          "Bring wells and field operations into proper regulatory and operating status.",
-      },
-      {
-        icon: "gauge",
-        title: "Capital Efficiency",
-        description:
-          "Prioritize lower-cost reactivation opportunities where existing infrastructure supports redevelopment.",
-      },
-      {
-        icon: "well",
-        title: "Production Restoration",
-        description:
-          "Focus on practical steps that can return wells to production or improve existing output.",
-      },
-      {
-        icon: "scale",
-        title: "Long-Term Field Management",
-        description:
-          "Treat each field as a long-term asset rather than a short-term transaction.",
-      },
-    ],
-  },
-} as const;
-
-/* ----------------------------- Technology ----------------------------- */
-
-export const technologyPage = {
-  hero: {
-    kicker: "Technology",
-    headline: "Modern Tools for Mature Reservoirs",
-    copy: "WTXR applies modern petroleum engineering, field technology, and recovery methods to assets originally developed before many of today’s tools were available.",
-  },
-  sections: [
-    {
-      icon: "layers",
-      title: "Reservoir Analysis",
-      description:
-        "Historical production records, geology, well logs, pressure data, reservoir behavior, and field history are used to evaluate remaining potential and prioritize redevelopment plans.",
-    },
-    {
-      icon: "workover",
-      title: "Workovers",
-      description:
-        "Mechanical repairs, cleanouts, tubing or pump replacement, and wellbore maintenance may restore wells that were previously shut in or underperforming.",
-    },
-    {
-      icon: "lift",
-      title: "Artificial Lift",
-      description:
-        "Updated lift systems can help produce wells that no longer flow naturally, improving production consistency and extending the productive life of mature assets.",
-    },
-    {
-      icon: "stimulation",
-      title: "Stimulation",
-      description:
-        "Modern stimulation techniques can improve flow from tight, damaged, or underperforming zones.",
-    },
-    {
-      icon: "recompletion",
-      title: "Recompletion",
-      description:
-        "Existing wellbores may provide access to additional productive intervals that were not fully developed by prior operators.",
-    },
-    {
-      icon: "eor",
-      title: "Enhanced Oil Recovery",
-      description:
-        "EOR methods may improve recovery in mature reservoirs where primary production has left significant hydrocarbons behind.",
-    },
-    {
-      icon: "surface",
-      title: "Surface Optimization",
-      description:
-        "Field infrastructure, tanks, lines, meters, and production systems can be upgraded or optimized to improve safety, uptime, and efficiency.",
-    },
-  ],
 } as const;
 
 /* ----------------------------- Investors ----------------------------- */
@@ -552,7 +337,7 @@ export const investorsPage = {
   hero: {
     kicker: "Investor Relations",
     headline: "A Public Energy Company Focused on Legacy Asset Recovery",
-    copy: "West Texas Resources is building a public energy platform around the reactivation and redevelopment of mature oil and gas assets — combining proven production history, existing infrastructure, and experienced field leadership.",
+    copy: "West Texas Resources is building an energy platform around the reactivation and redevelopment of mature oil and gas assets — with the reporting and disclosure standards of a public company.",
     primaryCta: { label: "View Newsroom", href: "/newsroom" },
     secondaryCta: { label: "Contact Investor Relations", href: "#investor-contact" },
   },
@@ -667,7 +452,7 @@ export const newsroomPage = {
   hero: {
     kicker: "Newsroom",
     headline: "WTXR News, Updates & Investor Communications",
-    copy: "Follow the latest company announcements, operational updates, investor communications, and public-company news from West Texas Resources, Inc.",
+    copy: "Every official release from West Texas Resources — summarized on site, with a link to the original announcement as the source of record.",
   },
   categories: [
     "All",
