@@ -15,7 +15,7 @@ function Logo({
   onClick,
   compact,
 }: {
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent<HTMLAnchorElement>) => void;
   compact?: boolean;
 }) {
   return (
@@ -62,6 +62,20 @@ export function Navbar() {
 
   const close = () => setOpen(false);
 
+  /* On the homepage, the logo scrolls smoothly back to the hero
+     instead of triggering a same-route navigation. */
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    close();
+    if (pathname === "/") {
+      e.preventDefault();
+      if (window.__lenis) {
+        window.__lenis.scrollTo(0);
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    }
+  };
+
   return (
     <>
       <header
@@ -75,7 +89,7 @@ export function Navbar() {
         <div className="shell container-px grid h-[var(--header-height)] grid-cols-[1fr_auto] items-center md:grid-cols-3">
           {/* Left — badge logo, large over the hero, compact once scrolled */}
           <div className="justify-self-start">
-            <Logo onClick={close} compact={scrolled && !open} />
+            <Logo onClick={handleLogoClick} compact={scrolled && !open} />
           </div>
 
           {/* Center — key destinations for a public company (desktop) */}

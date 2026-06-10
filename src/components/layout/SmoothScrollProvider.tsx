@@ -3,6 +3,12 @@
 import { useEffect } from "react";
 import Lenis from "lenis";
 
+declare global {
+  interface Window {
+    __lenis?: Lenis;
+  }
+}
+
 export function SmoothScrollProvider({
   children,
 }: {
@@ -19,6 +25,8 @@ export function SmoothScrollProvider({
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
     });
+    // Expose for programmatic scrolls (e.g. logo click scrolls home).
+    window.__lenis = lenis;
 
     let frame = 0;
     const raf = (time: number) => {
@@ -30,6 +38,7 @@ export function SmoothScrollProvider({
     return () => {
       cancelAnimationFrame(frame);
       lenis.destroy();
+      delete window.__lenis;
     };
   }, []);
 
