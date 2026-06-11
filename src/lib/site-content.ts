@@ -9,7 +9,7 @@ export const company = {
   ticker: "WTXR",
   market: "OTC",
   headquarters: "Brenham, Texas",
-  leadership: "Donald H. Goree, Chairman & CEO",
+  leadership: "Donald H. Gorée, Chairman & President",
   affiliate: "Texas Coastal Energy Corp.",
   tagline: "Legacy Fields. Modern Recovery.",
   missionTheme: "Reclaim. Restore. Recover.",
@@ -392,7 +392,7 @@ export const investorsPage = {
       { label: "Ticker", value: "WTXR" },
       { label: "Market", value: "OTC Markets" },
       { label: "Headquarters", value: "Brenham, Texas" },
-      { label: "Leadership", value: "Donald H. Goree, Chairman & CEO" },
+      { label: "Leadership", value: "Donald H. Gorée, Chairman & President" },
       { label: "Operating Subsidiary", value: "Texas Coastal Energy" },
       { label: "Sector", value: "Energy" },
       {
