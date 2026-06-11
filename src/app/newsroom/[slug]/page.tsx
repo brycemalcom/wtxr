@@ -75,36 +75,66 @@ export default async function NewsArticlePage({
             </h1>
 
             <div className="mt-10 space-y-6 border-t border-border-subtle pt-10">
-              {item.body.map((paragraph, i) => (
-                <p
-                  key={i}
-                  className={
-                    i === 0
-                      ? "text-lg leading-relaxed text-text-primary"
-                      : "text-base leading-relaxed text-text-secondary"
-                  }
-                >
-                  {paragraph}
-                </p>
-              ))}
+              {item.body.map((block, i) => {
+                if (typeof block === "string") {
+                  return (
+                    <p
+                      key={i}
+                      className={
+                        i === 0
+                          ? "text-lg leading-relaxed text-text-primary"
+                          : "text-base leading-relaxed text-text-secondary"
+                      }
+                    >
+                      {block}
+                    </p>
+                  );
+                }
+                if ("heading" in block) {
+                  return (
+                    <h2
+                      key={i}
+                      className="flex items-center gap-3 pt-6 font-display text-xl font-semibold tracking-tight text-text-primary sm:text-2xl"
+                    >
+                      <span className="h-1 w-6 shrink-0 rounded-full bg-gradient-energy" />
+                      {block.heading}
+                    </h2>
+                  );
+                }
+                return (
+                  <ul key={i} className="space-y-3 pl-1">
+                    {block.list.map((entry) => (
+                      <li
+                        key={entry}
+                        className="flex items-start gap-3 text-base leading-relaxed text-text-secondary"
+                      >
+                        <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-orange" />
+                        {entry}
+                      </li>
+                    ))}
+                  </ul>
+                );
+              })}
             </div>
 
             {/* Official source */}
-            <div className="mt-12 flex flex-wrap items-center gap-5 rounded-2xl border border-border-subtle bg-surface/50 p-6">
-              <div className="flex-1">
-                <p className="text-sm font-semibold text-text-primary">
-                  Official release
-                </p>
-                <p className="mt-1 text-sm text-text-muted">
-                  Read the full announcement at {item.source}, the official
-                  source of record.
-                </p>
+            {item.sourceUrl ? (
+              <div className="mt-12 flex flex-wrap items-center gap-5 rounded-2xl border border-border-subtle bg-surface/50 p-6">
+                <div className="flex-1">
+                  <p className="text-sm font-semibold text-text-primary">
+                    Official release
+                  </p>
+                  <p className="mt-1 text-sm text-text-muted">
+                    Read the full announcement at {item.source}, the official
+                    source of record.
+                  </p>
+                </div>
+                <Button href={item.sourceUrl} variant="secondary">
+                  Read full release
+                  <ArrowUpRight className="h-4 w-4" />
+                </Button>
               </div>
-              <Button href={item.sourceUrl} variant="secondary">
-                Read full release
-                <ArrowUpRight className="h-4 w-4" />
-              </Button>
-            </div>
+            ) : null}
 
             <p className="mt-10 text-xs leading-relaxed text-text-muted">
               {forwardLookingShort}
