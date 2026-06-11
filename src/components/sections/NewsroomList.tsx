@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
@@ -51,9 +52,18 @@ export function NewsroomList({
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="group mt-10 grid overflow-hidden rounded-3xl border border-border-subtle bg-surface/60 transition-all duration-500 hover:border-brand-orange/40 lg:grid-cols-2"
         >
-          <div className="relative min-h-[16rem] overflow-hidden bg-gradient-dark">
+          <div className="relative flex min-h-[16rem] items-center justify-center overflow-hidden bg-gradient-dark">
             <div className="absolute inset-0 reservoir-grid opacity-[0.08]" />
             <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-brand-orange/20 blur-3xl" />
+            {/* Company badge as featured artwork */}
+            <div className="pointer-events-none absolute h-64 w-64 rounded-full bg-brand-amber/15 blur-[80px]" />
+            <Image
+              src="/wtxr-logo.png"
+              alt="West Texas Resources, Inc."
+              width={320}
+              height={320}
+              className="relative my-8 h-52 w-52 transition-transform duration-700 group-hover:scale-105 sm:h-64 sm:w-64 lg:h-72 lg:w-72"
+            />
             <span className="absolute left-6 top-6 rounded-full border border-border-warm bg-black/40 px-3 py-1 text-[0.65rem] font-medium uppercase tracking-wider text-brand-amber backdrop-blur">
               Featured · {featured.displayCategory}
             </span>
