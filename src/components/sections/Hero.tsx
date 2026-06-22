@@ -9,6 +9,26 @@ import { EASE } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 
 export function Hero() {
+  /* Always scroll to the target section — even if the URL hash already
+     matches (a plain anchor click is a no-op in that case). */
+  const handleStatClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    const target = document.querySelector<HTMLElement>(href);
+    if (!target) return;
+    e.preventDefault();
+    // Absolute target position, minus the fixed header + sticky ticker band.
+    const top =
+      target.getBoundingClientRect().top + window.scrollY - 132;
+    if (window.__lenis) {
+      window.__lenis.scrollTo(top);
+    } else {
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+    history.replaceState(null, "", href);
+  };
+
   return (
     <section
       id="top"
@@ -97,7 +117,7 @@ export function Hero() {
           </Button>
         </motion.div>
 
-        {/* Stat row — text laid directly over the video, no cards */}
+        {/* Stat row — clickable jumps to the relevant section, no cards */}
         <motion.div
           className="mt-16 grid grid-cols-2 gap-x-8 gap-y-8 lg:grid-cols-4"
           initial={{ opacity: 0, y: 24 }}
@@ -105,35 +125,26 @@ export function Hero() {
           transition={{ duration: 0.8, ease: EASE, delay: 0.4 }}
         >
           {hero.stats.map((stat, i) => (
-            <div
+            <Link
               key={stat.label}
+              href={stat.href}
+              onClick={(e) => handleStatClick(e, stat.href)}
               className={cn(
-                "lg:pl-8",
+                "group block transition-colors lg:pl-8",
                 i > 0 && "lg:border-l lg:border-border-subtle/50"
               )}
             >
-              <p className="font-display text-2xl font-bold text-energy drop-shadow-[0_2px_16px_rgba(0,0,0,0.55)] sm:text-3xl">
+              <p className="flex items-center gap-1.5 font-display text-2xl font-bold text-energy drop-shadow-[0_2px_16px_rgba(0,0,0,0.55)] sm:text-3xl">
                 {stat.value}
+                <ArrowUpRight className="h-4 w-4 text-brand-amber/0 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-brand-amber" />
               </p>
-              <p className="mt-2 max-w-[12rem] text-xs leading-relaxed text-text-secondary drop-shadow-[0_1px_10px_rgba(0,0,0,0.75)]">
+              <p className="mt-2 max-w-[12rem] text-xs leading-relaxed text-text-secondary drop-shadow-[0_1px_10px_rgba(0,0,0,0.75)] transition-colors group-hover:text-text-primary">
                 {stat.label}
               </p>
-            </div>
+            </Link>
           ))}
         </motion.div>
       </div>
-
-      <motion.div
-        className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 sm:flex"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1 }}
-      >
-        <span className="text-[0.6rem] uppercase tracking-[0.3em] text-text-muted">
-          Scroll
-        </span>
-        <span className="h-10 w-px bg-gradient-to-b from-brand-orange to-transparent" />
-      </motion.div>
     </section>
   );
 }

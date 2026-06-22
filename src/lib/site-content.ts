@@ -62,10 +62,22 @@ export const hero = {
   primaryCta: { label: "Explore the Strategy", href: "#model" },
   secondaryCta: { label: "Investor Relations", href: "/investors" },
   stats: [
-    { value: "40+ Years", label: "Technical & field experience" },
-    { value: "Legacy Assets", label: "Mature oil and gas fields" },
-    { value: "Modern Recovery", label: "Stimulation, lift, EOR & optimization" },
-    { value: "Public Company", label: "OTC: WTXR" },
+    {
+      value: "40+ Years",
+      label: "Technical & field experience",
+      href: "#company",
+    },
+    {
+      value: "Legacy Assets",
+      label: "Mature oil and gas fields",
+      href: "#assets",
+    },
+    {
+      value: "Modern Recovery",
+      label: "Stimulation, lift, EOR & optimization",
+      href: "#technology",
+    },
+    { value: "Public Company", label: "OTC: WTXR", href: "#investors" },
   ],
 } as const;
 
