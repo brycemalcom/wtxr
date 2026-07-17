@@ -36,6 +36,38 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
+    slug: "nine-producing-wells-acquisition",
+    title:
+      "West Texas Resources Announces Acquisition of Nine Producing Texas Oil and Gas Wells Expected to Generate Approximately $775,000 in Monthly Gross Revenue",
+    category: "Operations",
+    displayCategory: "Company Update",
+    date: "July 14, 2026",
+    source: "ACCESS Newswire",
+    sourceUrl:
+      "https://www.accessnewswire.com/newsroom/en/oil-gas-and-energy/west-texas-resources-announces-acquisition-of-nine-producing-texas-oil-and-gas-w-1190921",
+    excerpt:
+      "WTXR acquired eight producing wells in Jackson County and one producing gas well in Fort Bend County, Texas, with current estimates indicating combined potential gross production revenue of approximately $775,000 per month before customary deductions.",
+    body: [
+      "BRENHAM, Texas – July 14, 2026 – West Texas Resources, Inc. (OTCID: WTXR) announced the acquisition of a package of producing oil and gas assets consisting of eight producing wells in Jackson County, Texas, and one producing gas well in Fort Bend County, Texas.",
+      "The acquired properties are expected to significantly expand the Company's production profile and strengthen its long-term cash flow generation as WTXR continues building a diversified portfolio of producing energy assets.",
+      { heading: "Estimated Production and Revenue" },
+      "According to current engineering and operational estimates, the eight Jackson County wells are expected to produce a combined average of approximately 300 barrels of oil per day together with approximately 1.5 million cubic feet of natural gas per day. The Fort Bend County well is expected to produce approximately 300 MCF of natural gas per day, together with associated condensate production.",
+      "Based on commodity-price assumptions of approximately $70 per barrel of oil and $3.20 per MCF of natural gas, management estimates the acquired properties have the potential to generate:",
+      {
+        list: [
+          "Approximately $630,000 per month in gross oil revenue",
+          "Approximately $145,000 per month in gross natural gas revenue",
+          "Approximately $775,000 per month in combined gross production revenue before royalties, operating expenses, taxes, and other customary deductions",
+        ],
+      },
+      { heading: "Operational Transition" },
+      "The Company estimates that approximately $1.5 million will be invested in hook-ups, facility upgrades, and minor repairs needed to optimize production and assume full operational control. Management believes that investment could potentially be recovered in approximately two months based on current projections, although actual results may vary.",
+      "Operations on the properties will be conducted through Texas Coastal Energy, the Company's wholly owned operating subsidiary. Following the transition, Texas Coastal Energy intends to conduct updated deliverability testing and operational reviews designed to maximize long-term production and recovery.",
+      "The Company expects to provide additional operational updates as the transition progresses and the initial evaluation and optimization program is completed.",
+    ],
+    featured: true,
+  },
+  {
     slug: "chairman-letter-spring-2026",
     title:
       "West Texas Resources Issues Spring 2026 Chairman's Letter as Company Advances Toward OTCQB, Expands Operating Capability, and Evaluates High-Impact Gulf Coast Acquisition",
@@ -80,7 +112,6 @@ export const news: NewsItem[] = [
       { heading: "Forward-Looking Statements" },
       "This release contains forward-looking statements within the meaning of federal securities laws. These statements include, but are not limited to, expectations regarding audited filings, uplisting plans, operational transitions, acquisition evaluations, future production, revenues, cash flow, and market position. Forward-looking statements are based on current assumptions and are subject to risks and uncertainties that may cause actual results to differ materially. The Company undertakes no obligation to update forward-looking statements except as required by law.",
     ],
-    featured: true,
   },
   {
     slug: "reactivation-plan-59-wells",
