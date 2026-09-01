@@ -1,7 +1,7 @@
 /* ------------------------------------------------------------------
    Newsroom content — real West Texas Resources, Inc. (OTC: WTXR)
    press releases. Each item has an on-site summary page and links
-   to the official source (PR Newswire / EIN Presswire) as the
+   to the official source (ACCESS Newswire / PR Newswire / EIN Presswire) as the
    system of record.
 
    To add a release: prepend a new entry (newest first), set a real
@@ -36,6 +36,86 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
+    slug: "texas-coastal-energy-operator-approval",
+    title:
+      "West Texas Resources Subsidiary Texas Coastal Energy Approved as Oil and Gas Operator by the Railroad Commission of Texas",
+    category: "Operations",
+    displayCategory: "Company Update",
+    date: "September 1, 2026",
+    source: "ACCESS Newswire",
+    sourceUrl:
+      "https://www.accessnewswire.com/newsroom/en/oil-gas-and-energy/west-texas-resources-subsidiary-texas-coastal-energy-approved-as-oil-and-gas-ope-1215034",
+    excerpt:
+      "Texas Coastal Energy, WTXR's wholly owned subsidiary, received Railroad Commission of Texas approval to operate oil and gas properties in the state, effective August 2026.",
+    body: [
+      "West Texas Resources announced that its wholly owned subsidiary, Texas Coastal Energy, has been licensed and approved by the Railroad Commission of Texas to serve as an oil and gas operator in the state, effective August 2026.",
+      "The approval authorizes Texas Coastal Energy to manage and operate oil and gas leases and existing wells and, where applicable, oversee drilling and related field activity under Texas regulatory requirements.",
+      "As WTXR's dedicated operating arm, the subsidiary is expected to manage field operations, coordinate technical work, oversee existing wells, and support future drilling, rehabilitation, workover, and production initiatives.",
+      { heading: "$50,000 Blanket Bond" },
+      "WTXR expects to post a $50,000 blanket financial-assurance bond for Texas Coastal Energy during September 2026. Under the current Railroad Commission structure described in the release, that tier applies to operators with 11 to 99 wells.",
+      "The company said its current well count and the number of wells included in its broader reactivation program are being reconciled and will be reported separately once confirmed.",
+      { heading: "Building an Integrated Operating Platform" },
+      "Management described the approval as a key step toward operating a larger portfolio directly. WTXR continues to evaluate producing properties, development-stage assets, wells, leases, equipment, and related energy assets for potential rehabilitation, optimization, and increased production.",
+      { heading: "About West Texas Resources, Inc." },
+      "West Texas Resources, Inc. is an oil and gas company focused on acquiring, developing, rehabilitating, and optimizing properties with production and development potential. Through Texas Coastal Energy, the company is building an integrated platform to manage and develop oil and gas properties directly.",
+      { heading: "Forward-Looking Statements" },
+      "The official release includes forward-looking statements concerning planned expansion, future drilling, rehabilitation and production activity, potential acquisitions, operating capabilities, financial assurance, and the anticipated role of Texas Coastal Energy. Actual results may differ because of risks and uncertainties.",
+    ],
+    featured: true,
+  },
+  {
+    slug: "audit-s1-otcqb-strategy-update",
+    title:
+      "West Texas Resources Inc., Reports Updates on PCAOB Audit Progression, S-1 Filing, and OTCQB Up-Listing Strategy",
+    category: "Investor Relations",
+    displayCategory: "Investor Relations",
+    date: "August 18, 2026",
+    source: "ACCESS Newswire",
+    sourceUrl:
+      "https://www.accessnewswire.com/newsroom/en/oil-gas-and-energy/west-texas-resources-inc.-reports-updates-on-pcaob-audit-progression-s-1-filing-1208689",
+    excerpt:
+      "WTXR reported progress on its independent audit and Form S-1 preparation, with both initiatives targeted for Q3 2026 as the company works toward SEC reporting and OTCQB qualification.",
+    body: [
+      "West Texas Resources provided an update on its audit, SEC reporting, and capital-markets initiatives as it works to strengthen its corporate infrastructure and pursue OTCQB Venture Market qualification.",
+      "Management said the independent audit had advanced over the preceding several weeks and was expected to be completed during the third quarter of 2026.",
+      "The company also reported that preparation of a Form S-1 registration statement was substantially complete. After the audit is finished and the required audited financial information is incorporated, WTXR intends to file the registration statement with the U.S. Securities and Exchange Commission.",
+      { heading: "Broader Capital-Markets Strategy" },
+      "WTXR described OTCQB qualification as a near-term objective. Over the medium term, and only after meeting applicable financial, governance, share-price, and other requirements, the company expects to evaluate a senior U.S. exchange listing, including Nasdaq, the New York Stock Exchange, or the developing Texas Stock Exchange.",
+      "The company also intends to explore a secondary European listing, with Germany among its preferred markets, as part of an effort to broaden access for international investors.",
+      { heading: "Expanding the Business" },
+      "Alongside its reporting initiatives, WTXR said its primary operating focus remains the acquisition, development, rehabilitation, and optimization of oil and gas assets. It also plans to evaluate technologies and strategic opportunities that could complement its energy operations.",
+      { heading: "About West Texas Resources, Inc." },
+      "West Texas Resources, Inc. is an oil and gas company pursuing organic growth and complementary acquisitions intended to expand its operating platform and create long-term shareholder value.",
+      { heading: "Forward-Looking Statements" },
+      "The official release cautions that the audit, Form S-1 filing, OTCQB qualification, any secondary or senior-exchange listing, and contemplated investments or acquisitions remain subject to completion, applicable requirements, approvals, and other risks and uncertainties.",
+    ],
+  },
+  {
+    slug: "technical-capabilities-operational-platform-expansion",
+    title:
+      "West Texas Resources Announces Strategic Expansion of Technical Capabilities and Operational Platform",
+    category: "Operations",
+    displayCategory: "Company Update",
+    date: "July 21, 2026",
+    source: "ACCESS Newswire",
+    sourceUrl:
+      "https://www.accessnewswire.com/newsroom/en/oil-gas-and-energy/west-texas-resources-announces-strategic-expansion-of-technical-capabilities-and-1193820",
+    excerpt:
+      "WTXR announced additions in land management, petroleum engineering, and field personnel to support asset evaluation, well rehabilitation, production optimization, and future acquisitions.",
+    body: [
+      "West Texas Resources announced an expansion of its technical, engineering, and land-management capabilities to support both organic development and acquisition-led growth.",
+      "The company said it was adding a Land Manager, a senior petroleum engineer, and additional field personnel. The expanded team is intended to support asset evaluation, workover planning, well rehabilitation, production optimization, and the integration of future acquisitions.",
+      { heading: "Organic Development" },
+      "Planned organic-growth work includes well testing, infrastructure upgrades, equipment installation, production restarts, and the application of modern technical practices across WTXR's asset base.",
+      { heading: "Acquisition Platform" },
+      "In parallel, WTXR continues to evaluate producing properties, development-stage assets, leases, wells, equipment, and complementary energy businesses. Management said the company is also improving internal planning, financial reporting, and corporate governance to support future operations, acquisitions, and financing activity.",
+      { heading: "About West Texas Resources, Inc." },
+      "West Texas Resources, Inc. is an emerging oil and gas company focused on acquiring, developing, rehabilitating, and optimizing energy assets through organic development, strategic acquisitions, and partnerships with experienced industry professionals.",
+      { heading: "Forward-Looking Statements" },
+      "The official release contains forward-looking statements regarding staffing, operational activity, acquisitions, financing, production, and growth. These plans remain subject to execution risks, market conditions, financing availability, and other uncertainties.",
+    ],
+  },
+  {
     slug: "nine-producing-wells-acquisition",
     title:
       "West Texas Resources Announces Acquisition of Nine Producing Texas Oil and Gas Wells Expected to Generate Approximately $775,000 in Monthly Gross Revenue",
@@ -49,7 +129,7 @@ export const news: NewsItem[] = [
       "WTXR acquired eight producing wells in Jackson County and one producing gas well in Fort Bend County, Texas, with current estimates indicating combined potential gross production revenue of approximately $775,000 per month before customary deductions.",
     body: [
       "FOR IMMEDIATE RELEASE",
-      "BRENHAM, Texas, July 14, 2026 – West Texas Resources, Inc. (OTCQB: WTXR) (“WTXR” or the “Company”) today announced the acquisition of a package of producing oil and gas assets consisting of eight producing wells in Jackson County, Texas, and one producing gas well in Fort Bend County, Texas.",
+      "BRENHAM, Texas, July 14, 2026 – West Texas Resources, Inc. (OTCID: WTXR) (“WTXR” or the “Company”) today announced the acquisition of a package of producing oil and gas assets consisting of eight producing wells in Jackson County, Texas, and one producing gas well in Fort Bend County, Texas.",
       "The acquired properties are expected to significantly expand the Company’s production profile and strengthen its long-term cash flow generation as WTXR continues executing its strategy of building a diversified portfolio of producing energy assets.",
       "According to current engineering and operational estimates, the eight Jackson County wells are expected to produce a combined average of approximately 300 barrels of oil per day (BOPD) together with approximately 1.5 million cubic feet of natural gas per day (MMCFD).",
       "The producing gas well located in Fort Bend County is expected to produce approximately 300 MCF of natural gas per day, together with associated condensate production.",
@@ -68,11 +148,34 @@ export const news: NewsItem[] = [
       "“This acquisition represents another important milestone in executing our strategy of acquiring high-quality producing energy assets with attractive cash flow characteristics. These properties immediately strengthen our production base while providing significant opportunities for operational improvements and future reserve development. Through Texas Coastal Energy, we intend to optimize these assets and continue building a strong operating platform capable of creating substantial long-term value for our shareholders.”",
       "The Company expects to provide additional operational updates as the transition progresses and as Texas Coastal Energy completes its initial evaluation and optimization program.",
       { heading: "About West Texas Resources, Inc." },
-      "West Texas Resources, Inc. (OTCQB: WTXR) is an energy company focused on the acquisition, development, and operation of producing oil and natural gas assets throughout the United States. Through its wholly owned subsidiary, Texas Coastal Energy, the Company seeks to acquire cash-flowing energy properties while implementing operational improvements designed to enhance production, reserves, and long-term shareholder value. WTXR is also expanding its strategic initiatives through the acquisition of technology assets that support innovation and efficiency across the energy sector.",
+      "West Texas Resources, Inc. (OTCID: WTXR) is an energy company focused on the acquisition, development, and operation of producing oil and natural gas assets throughout the United States. Through its wholly owned subsidiary, Texas Coastal Energy, the Company seeks to acquire cash-flowing energy properties while implementing operational improvements designed to enhance production, reserves, and long-term shareholder value. WTXR is also expanding its strategic initiatives through the acquisition of technology assets that support innovation and efficiency across the energy sector.",
       { heading: "Forward-Looking Statements" },
       "This press release contains forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995. These statements include, but are not limited to, statements regarding expected production volumes, estimated revenues, anticipated cash flow, reserve potential, capital expenditures, operational improvements, optimization plans, payback periods, future acquisitions, and other statements that are not historical facts. Forward-looking statements are based on management’s current expectations, estimates, and assumptions and are subject to numerous risks and uncertainties that could cause actual results to differ materially from those expressed or implied. Such risks include, among others, fluctuations in oil and natural gas prices, production performance, reserve estimates, operational risks, regulatory approvals, financing availability, market conditions, and other factors beyond the Company’s control. Readers are cautioned not to place undue reliance on these forward-looking statements, which speak only as of the date hereof. The Company undertakes no obligation to update or revise any forward-looking statements except as required by applicable law.",
     ],
-    featured: true,
+  },
+  {
+    slug: "pcaob-audit-firm-engagement",
+    title:
+      "West Texas Resources Engages PCAOB Audit Firm to Advance OTCQB Uplisting Strategy",
+    category: "Investor Relations",
+    displayCategory: "Company Update",
+    date: "July 9, 2026",
+    source: "ACCESS Newswire",
+    sourceUrl:
+      "https://www.accessnewswire.com/newsroom/en/oil-gas-and-energy/west-texas-resources-engages-pcaob-audit-firm-to-advance-otcqb-uplisting-strateg-1189004",
+    excerpt:
+      "WTXR engaged a PCAOB-registered accounting firm to conduct an independent financial-statement audit in support of enhanced reporting standards and a planned OTCQB application.",
+    body: [
+      "West Texas Resources announced that it had engaged a Public Company Accounting Oversight Board-registered public accounting firm to conduct an independent audit of the company's financial statements.",
+      "The engagement is intended to strengthen reporting standards, corporate governance, and transparency. Following completion of the audit and satisfaction of applicable OTC Markets requirements, WTXR intends to apply for quotation on the OTCQB Venture Market.",
+      "The announcement followed the company's completion of current OTC Markets reporting and continued development of its Texas oil and gas assets.",
+      { heading: "Operating Platform" },
+      "WTXR also reported continued work to expand its operating platform through Texas Coastal Energy Corp., its wholly owned subsidiary. Management said direct operational control should improve efficiency, reduce costs, and provide greater control over future production-enhancement work.",
+      { heading: "About West Texas Resources, Inc." },
+      "West Texas Resources, Inc. (OTCID: WTXR) is an independent energy company focused on the acquisition, redevelopment, and operation of oil and gas assets in Texas. Its strategy centers on disciplined acquisitions, well reactivation, and operational execution.",
+      { heading: "Forward-Looking Statements" },
+      "The official release notes that audit completion, OTCQB qualification, financing, acquisitions, production increases, operating performance, and any future exchange listing are subject to risks, uncertainties, and regulatory approvals.",
+    ],
   },
   {
     slug: "chairman-letter-spring-2026",
@@ -80,12 +183,14 @@ export const news: NewsItem[] = [
       "West Texas Resources Issues Spring 2026 Chairman's Letter as Company Advances Toward OTCQB, Expands Operating Capability, and Evaluates High-Impact Gulf Coast Acquisition",
     category: "Investor Relations",
     displayCategory: "Investor Relations",
-    date: "June 10, 2026",
-    source: "West Texas Resources, Inc.",
+    date: "June 11, 2026",
+    source: "ACCESS Newswire",
+    sourceUrl:
+      "https://www.accessnewswire.com/newsroom/en/oil-gas-and-energy/west-texas-resources-issues-spring-2026-chairmans-letter-as-company-advances-tow-1174893",
     excerpt:
       "WTXR's Spring 2026 Chairman's Letter outlines completed OTC Markets reporting for year-end 2025 and Q1 2026, a planned operational transition to a licensed in-house operator, audit engagement bids from PCAOB-qualified firms in support of an OTCQB uplisting, and the evaluation of a Gulf Coast acquisition with approximately $185,000 per month in current net operating oil revenues.",
     body: [
-      "BRENHAM, Texas – June 10, 2026 – West Texas Resources, Inc. (OTC: WTXR) today released its Spring 2026 Chairman's Letter to Shareholders, outlining the Company's continued progress in regulatory compliance, operational capability, financial reporting, and strategic growth initiatives. The letter highlights WTXR's strengthened market position, operational transition through its subsidiary Texas Coastal Energy Corp., and the evaluation of a significant Gulf Coast acquisition opportunity.",
+      "BRENHAM, Texas – June 11, 2026 – West Texas Resources, Inc. (OTC PINK: WTXR) released its Spring 2026 Chairman's Letter to Shareholders, outlining the Company's continued progress in regulatory compliance, operational capability, financial reporting, and strategic growth initiatives. The letter highlights WTXR's strengthened market position, operational transition through its subsidiary Texas Coastal Energy Corp., and the evaluation of a significant Gulf Coast acquisition opportunity.",
       { heading: "Spring 2026 Chairman's Letter to Shareholders" },
       "Fellow Shareholders,",
       "West Texas Resources, Inc. is entering a pivotal phase of advancement across regulatory compliance, operational execution, and strategic expansion. Our focus remains on strengthening the Company's foundation, enhancing market standing, and positioning WTXR for the next stage of growth. This letter provides a direct update on recent developments and the Company's direction as we move further into 2026.",
